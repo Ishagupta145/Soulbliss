@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulBliss - Tune Into Your Bliss</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <img src="assets/logo.png" alt="SoulBliss Logo" class="logo">
+            <span class="brand-name">SoulBliss</span>
+            <nav class="nav-menu">
+                <div class="nav-item active" data-page="home">Home</div>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="header">
+                <div class="search-bar">
+                    <span class="search-icon"></span>
+                    <input type="text" placeholder="Search for songs, artists, or albums">
+                </div>
+                <div class="user-menu">
+                    <!-- Adjusted the link to point to the public/login.html file -->
+                    <button class="login-btn" onclick="window.location.href='login.html'">LogIn</button>
+
+                    <div class="user-profile">
+                    <button class="login-btn" onclick="window.location.href='signup.html'">SignUp</button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Home Page Content -->
+            <section id="home-page" class="page active">
+                <!-- Featured Playlists -->
+                <section class="featured">
+                    <h2 class="section-title">Featured Playlists</h2>
+                    <div class="featured-grid">
+                        <!-- Featured Playlist Cards -->
+                        <div class="music-card">
+                            <img src="assets/playlist-cover.jpg" alt="Playlist Cover">
+                            <div class="music-info">
+                                <h3>Morning Motivation</h3>
+                                <p>Start your day right</p>
+                            </div>
+                        </div>
+                        <div class="music-card">
+                            <img src="assets/playlist-cover2.jpg" alt="Playlist Cover">
+                            <div class="music-info">
+                                <h3>Workout Boost</h3>
+                                <p>Feel the Energy</p>
+                            </div>
+                        </div>
+                        <div class="music-card">
+                            <img src="assets/playlist-cover3.jpg" alt="Playlist Cover">
+                            <div class="music-info">
+                                <h3>Party Hits</h3>
+                                <p>Dance the night away</p>
+                            </div>
+                        </div>
+                        <div class="music-card">
+                            <img src="assets/playlist-cover4.jpg" alt="Playlist Cover">
+                            <div class="music-info">
+                                <h3>Chill Vibes</h3>
+                                <p>just chill</p>
+                            </div>
+                        </div>
+                        <!-- More playlist cards... -->
+                    </div>
+                </section>
+            </section>
+
+            <section class="popular-songs">
+                    <h2 class="section-title">Popular Songs</h2>
+                    <div class="music-grid">
+                <!-- Popular Songs Section -->
+                <div class="song-card">
+                    <img src="assets/Cover/1.jpg" alt="Song Cover" class="song-cover">
+                    <div class="song-info">
+                        <h4 class="song-title">Warriyo</h4>
+                        <p class="artist-name">Mortals</p>
+                    </div>
+                    <button class="play-button">▶</button>
+                </div>
+                <div class="song-card">
+                    <img src="assets/Cover/3.jpg" alt="Song Cover" class="song-cover">
+                    <div class="song-info">
+                        <h4 class="song-title">Invincible</h4>
+                        <p class="artist-name">NCS</p>
+                    </div>
+                    <button class="play-button">▶</button>
+                </div>
+                <div class="song-card">
+                    <img src="assets/Cover/5.jpg" alt="Song Cover" class="song-cover">
+                    <div class="song-info">
+                        <h4 class="song-title">Heaven</h4>
+                        <p class="artist-name">Huma</p>
+                    </div>
+                    <button class="play-button">▶</button>
+                </div>
+            </section>
+        
+        </main>
+    </div>
+
+    
+    <script src="js/script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulBliss</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <img src="assets/logo.png" alt="SoulBliss Logo" class="logo">
+            <span class="brand-name">SoulBliss</span>
+            <nav class="nav-menu">
+                <div class="nav-item active" data-page="home">Home</div>
+                <div class="nav-item" data-page="create-playlist" onclick="window.location.href='createplaylist.html'">Create Playlist</div>
+                <div class="nav-item" data-page="liked-songs" onclick="window.location.href='likedSongs.html'">Liked Songs</div>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="header">
+                <div class="search-bar">
+                    <span class="search-icon"></span>
+                    <input type="text" placeholder="Search for songs, artists, or albums">
+                </div>
+                <div class="user-menu">
+                    <div class="user-profile" onclick="toggleDropdown()">
+                        <img src="assets/avatar.jpg" alt="User Avatar" width="30px" height="30px">
+                        <p class="login-link"></p>
+                    </div>
+                    <!-- Dropdown Menu -->
+                    <div id="userDropdown" class="dropdown-content">
+                        <a href="landing2.html">Log out</a>
+                    </div>
+                </div>                
+            </header>
+
+            <!-- Home Page Content -->
+            <section id="home-page" class="page active">
+                <!-- Featured Playlists -->
+                <section class="featured">
+                    <h2 class="section-title">Featured Playlists</h2>
+                    <div class="featured-grid">
+                        <!-- Featured Playlist Cards -->
+                        <div class="music-card">
+                            <img src="assets/playlist-cover.jpg" alt="Playlist Cover">
+                            <div class="music-info">
+                                <h3>Morning Motivation</h3>
+                                <p>Start your day right</p>
+                            </div>
+                        </div>
+                        <div class="music-card">
+                            <img src="assets/playlist-cover2.jpg" alt="Playlist Cover">
+                            <div class="music-info">
+                                <h3>Workout Boost</h3>
+                                <p>Feel the Energy</p>
+                            </div>
+                        </div>
+                        <div class="music-card">
+                            <img src="assets/playlist-cover3.jpg" alt="Playlist Cover">
+                            <div class="music-info">
+                                <h3>Party Hits</h3>
+                                <p>Dance the night away</p>
+                            </div>
+                        </div>
+                        <div class="music-card">
+                            <img src="assets/playlist-cover4.jpg" alt="Playlist Cover">
+                            <div class="music-info">
+                                <h3>Chill Vibes</h3>
+                                <p>just chill</p>
+                            </div>
+                        </div>
+                        <!-- More playlist cards... -->
+                    </div>
+                </section>
+
+                <!-- Recently Played Section -->
+                <section class="recently-played">
+                    <h2 class="section-title">Latest Songs</h2>
+                    <div class="music-grid">
+                        <!-- Recently Played Cards -->
+                         <!-- Song Card Example -->
+                        <div class="song-card">
+                            <img src="assets/Cover/1.jpg" alt="Song Cover" class="song-cover">
+                            <div class="song-info">
+                                <h4 class="song-title">Warriyo</h4>
+                                <p class="artist-name">Mortals</p>
+                            </div>
+                            <button class="play-button">▶</button>
+                        </div>
+                        <div class="song-card">
+                            <img src="assets/Cover/2.jpg" alt="Song Cover" class="song-cover">
+                            <div class="song-info">
+                                <h4 class="song-title">Cielo</h4>
+                                <p class="artist-name">Huna</p>
+                            </div>
+                            <button class="play-button">▶</button>
+                        </div>
+                        <div class="song-card">
+                            <img src="assets/Cover/3.jpg" alt="Song Cover" class="song-cover">
+                            <div class="song-info">
+                                <h4 class="song-title">Invincible</h4>
+                                <p class="artist-name">NCS</p>
+                            </div>
+                            <button class="play-button">▶</button>
+                        </div>
+                        <div class="song-card">
+                            <img src="assets/Cover/4.jpg" alt="Song Cover" class="song-cover">
+                            <div class="song-info">
+                                <h4 class="song-title">Heart</h4>
+                                <p class="artist-name">NCS</p>
+                            </div>
+                            <button class="play-button">▶</button>
+                        </div>
+                        <div class="song-card">
+                            <img src="assets/Cover/5.jpg" alt="Song Cover" class="song-cover">
+                            <div class="song-info">
+                                <h4 class="song-title">Heaven</h4>
+                                <p class="artist-name">Huma</p>
+                            </div>
+                            <button class="play-button">▶</button>
+                        </div>
+                        <div class="song-card">
+                            <img src="assets/Cover/6.jpg" alt="Song Cover" class="song-cover">
+                            <div class="song-info">
+                                <h4 class="song-title">EH!DE</h4>
+                                <p class="artist-name">Jojo</p>
+                            </div>
+                            <button class="play-button">▶</button>
+                        </div>
+                        <div class="song-card">
+                            <img src="assets/Cover/7.jpg" alt="Song Cover" class="song-cover">
+                            <div class="song-info">
+                                <h4 class="song-title">Heroes</h4>
+                                <p class="artist-name">Jojo</p>
+                            </div>
+                            <button class="play-button">▶</button>
+                        </div>
+                        <div class="song-card">
+                            <img src="assets/Cover/8.jpg" alt="Song Cover" class="song-cover">
+                            <div class="song-info">
+                                <h4 class="song-title">Different</h4>
+                                <p class="artist-name">Sia</p>
+                            </div>
+                            <button class="play-button">▶</button>
+                        </div>
+                        <div class="song-card">
+                            <img src="assets/Cover/9.jpg" alt="Song Cover" class="song-cover">
+                            <div class="song-info">
+                                <h4 class="song-title">New</h4>
+                                <p class="artist-name">Sia</p>
+                            </div>
+                            <button class="play-button">▶</button>
+                        </div>
+                        <div class="song-card">
+                            <img src="assets/Cover/10.jpg" alt="Song Cover" class="song-cover">
+                            <div class="song-info">
+                                <h4 class="song-title">Love</h4>
+                                <p class="artist-name">Mortals</p>
+                            </div>
+                            <button class="play-button">▶</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Popular Songs Section
+                <section class="popular-songs">
+                    <h2 class="section-title">Popular Songs</h2>
+                    <div class="songs-grid">
+                        song card eg.
+                        <div class="song-card">
+                            <img src="assets/Cover/3.jpg" alt="Song Cover" class="song-cover">
+                            <div class="song-info">
+                                <h4 class="song-title">Song Title</h4>
+                                <p class="artist-name">Artist Name</p>
+                            </div>
+                            <button class="play-button">▶</button>
+                        </div>
+                        Add more song cards as needed 
+                        <div class="song-card">
+                            <img src="assets/Cover/4.jpg" alt="Song Cover" class="song-cover">
+                            <div class="song-info">
+                                <h4 class="song-title">Song Title</h4>
+                                <p class="artist-name">Artist Name</p>
+                            </div>
+                            <button class="play-button">▶</button>
+                        </div>
+                    </div>
+                </section>-->
+            </section>
+        </main>
+    </div>
+
+    <!-- Player Bar -->
+    <div class="player-bar">
+        <!-- Now Playing Section -->
+        <div class="now-playing">
+            <img src="path-to-track-cover.jpg" alt="Track Cover">
+            <div class="track-info">
+                <h4>Track Title</h4>
+                <p>Artist Name</p>
+            </div>
+            <button id="likeButton" class="like-button">♡</button>
+        </div>
+
+
+<!-- Player Controls -->
+<div class="player-controls">
+    <button class="control-button shuffle">↑↓</button>
+    <button class="control-button previous">❙◀</button>
+    <button class="control-button play">▶</button>
+    <button class="control-button pause">❙❙</button>
+    <button class="control-button next">▶❙</button>
+    <button class="control-button repeat">↻</button>
+</div>
+
+<style>
+.player-controls button {
+    color: #C4184B;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.control-button.pause {
+    display: none;
+}
+
+.playing .control-button.play {
+    display: none;
+}
+
+.playing .control-button.pause {
+    display: inline-block;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const playerControls = document.querySelector('.player-controls');
+    const playButton = playerControls.querySelector('.control-button.play');
+    const pauseButton = playerControls.querySelector('.control-button.pause');
+    
+    // Flag to track playing state
+    let isPlaying = false;
+    
+    // Function to toggle play/pause
+    function togglePlayPause() {
+        isPlaying = !isPlaying;
+        playerControls.classList.toggle('playing', isPlaying);
+        
+        // Here you can add your audio playing logic
+        if (isPlaying) {
+            // Add code to play audio
+            console.log('Playing audio');
+        } else {
+            // Add code to pause audio
+            console.log('Pausing audio');
+        }
+    }
+    
+    // Add click event listeners
+    playButton.addEventListener('click', togglePlayPause);
+    pauseButton.addEventListener('click', togglePlayPause);
+    
+    // Add click handlers for other buttons
+    const shuffleButton = playerControls.querySelector('.control-button.shuffle');
+    const previousButton = playerControls.querySelector('.control-button.previous');
+    const nextButton = playerControls.querySelector('.control-button.next');
+    const repeatButton = playerControls.querySelector('.control-button.repeat');
+    
+    shuffleButton.addEventListener('click', () => {
+        console.log('Shuffle clicked');
+        // Add your shuffle functionality here
+    });
+    
+    previousButton.addEventListener('click', () => {
+        console.log('Previous clicked');
+        // Add your previous track functionality here
+    });
+    
+    nextButton.addEventListener('click', () => {
+        console.log('Next clicked');
+        // Add your next track functionality here
+    });
+    
+    repeatButton.addEventListener('click', () => {
+        console.log('Repeat clicked');
+        // Add your repeat functionality here
+    });
+});
+</script>
+
+
+        <div class="player-right">
+            <div class="volume-control">
+                <div class="volume-container">
+                </div>
+                <button id="volumeButton" class="volume-button">🔊</button>
+                <div class="volume-slider">
+                    <div class="volume-progress"></div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <span class="time current">0:00</span>
+                <div class="progress-slider">
+                    <div class="progress"></div>
+                </div>
+                <span class="time total">0:00</span>
+            </div>
+        </div>
+    </div>
+    <script src="js/script1.js"></script>
+</body>
+</html>

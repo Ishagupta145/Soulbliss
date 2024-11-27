@@ -1,0 +1,234 @@
+<!--likedSongs.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulBliss</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .liked-songs-header {
+            padding: 1rem;
+            background: linear-gradient(to bottom, #c38096, #9667c2);
+            color: white;
+            display: flex;
+            align-items: flex-end;
+            gap: 2rem;
+        }
+
+        .liked-songs-cover {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #951d67, #ff0073);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .liked-songs-cover .heart-icon {
+            font-size: 45px;
+            color: white;
+        }
+
+        .playlist-info {
+            margin-bottom: 0.5rem;
+        }
+
+        .playlist-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0;
+        }
+        .songs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            color: #e2e8f0;
+        }
+
+        .songs-table th {
+            text-align: left;
+            padding: 0.5rem 1rem;
+            border-bottom: 1px solid #4a5568;
+            color: #a0aec0;
+            font-weight: normal;
+        }
+
+        .songs-table td {
+            padding: 0.5rem 1rem;
+            border-bottom: 1px solid #2d3748;
+        }
+
+        .songs-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .song-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .song-cover {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+
+        .sort-icon {
+            display: inline-block;
+            margin-left: 0.5rem;
+        }
+
+        .content-area {
+            padding: 0;
+            background: #1a202c;
+            min-height: calc(100vh - 90px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <img src="assets/logo.png" alt="SoulBliss Logo" class="logo">
+            <span class="brand-name">SoulBliss</span>
+            <nav class="nav-menu">
+                <div class="nav-item" data-page="home" onclick="window.location.href='index.html'">Home</div>
+                <div class="nav-item active" data-page="liked-songs">Liked Songs</div>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            
+            
+              <div class="liked-songs-header">
+                    <div class="liked-songs-cover">
+                        <span class="heart-icon">♥</span>
+                    </div>
+                    <div class="playlist-info">
+                        <h1 class="playlist-title">Liked Songs</h1>
+                    </div>
+                </div>
+
+                <!--<table class="songs-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Album</th>
+                            <th>Date added <span class="sort-icon">↓</span></th>
+                            <th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         Example song rows
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <div class="song-row">
+                                    <img src="assets/Cover/1.jpg" alt="Song cover" class="song-cover">
+                                    <div>
+                                        <div>Song Title</div>
+                                        <div style="color: #a0aec0;">Artist Name</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Album Name</td>
+                            <td>Nov 11, 2024</td>
+                            <td>3:45</td>
+                        </tr>
+                         Add more song rows as needed
+                    </tbody>
+                </table>-->
+                <div class="music-grid">
+                    <!-- Recently Played Cards -->
+                     <!-- Song Card Example -->
+                     <div class="song-card">
+                        <img src="assets/Cover/1.jpg" alt="Song Cover" class="song-cover">
+                        <div class="song-info">
+                            <h4 class="song-title">Warriyo</h4>
+                            <p class="artist-name">Mortals</p>
+                        </div>
+                        <button class="play-button">▶</button>
+                    </div>
+                    <div class="song-card">
+                        <img src="assets/Cover/2.jpg" alt="Song Cover" class="song-cover">
+                        <div class="song-info">
+                            <h4 class="song-title">Cielo</h4>
+                            <p class="artist-name">Huna</p>
+                        </div>
+                        <button class="play-button">▶</button>
+                    </div>
+                    <div class="song-card">
+                        <img src="assets/Cover/3.jpg" alt="Song Cover" class="song-cover">
+                        <div class="song-info">
+                            <h4 class="song-title">Invincible</h4>
+                            <p class="artist-name">NCS</p>
+                        </div>
+                        <button class="play-button">▶</button>
+                    </div>
+                    <div class="song-card">
+                        <img src="assets/Cover/4.jpg" alt="Song Cover" class="song-cover">
+                        <div class="song-info">
+                            <h4 class="song-title">Heart</h4>
+                            <p class="artist-name">NCS</p>
+                        </div>
+                        <button class="play-button">▶</button>
+                    </div>
+                    <div class="song-card">
+                        <img src="assets/Cover/5.jpg" alt="Song Cover" class="song-cover">
+                        <div class="song-info">
+                            <h4 class="song-title">Heaven</h4>
+                            <p class="artist-name">Huma</p>
+                        </div>
+                        <button class="play-button">▶</button>
+                    </div>
+                </div>
+        </main>
+    </div>
+
+    <!-- Player Bar -->
+    <div class="player-bar">
+        <div class="now-playing">
+            <img src="path-to-track-cover.jpg" alt="Track Cover">
+            <div class="track-info">
+                <h4>Track Title</h4>
+                <p>Artist Name</p>
+            </div>
+            <button id="likeButton" class="like-button">♡</button>
+        </div>
+
+        <div class="player-controls">
+            <button class="control-button shuffle">↑↓</button>
+            <button class="control-button previous">❙◀</button>
+            <button class="control-button play">▶</button>
+            <button class="control-button pause">❙❙</button>
+            <button class="control-button next">▶❙</button>
+            <button class="control-button repeat">↻</button>
+        </div>
+
+        <div class="player-right">
+            <div class="volume-control">
+                <div class="volume-container">
+                </div>
+                <button id="volumeButton" class="volume-button">🔊</button>
+                <div class="volume-slider">
+                    <div class="volume-progress"></div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <span class="time current">0:00</span>
+                <div class="progress-slider">
+                    <div class="progress"></div>
+                </div>
+                <span class="time total">0:00</span>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

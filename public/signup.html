@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulBliss</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <!-- Logo and Title -->
+            <h1 class="app-title" style="color: #C4184B;">SoulBliss</h1>
+            <p class="subtitle">Tune Into Your Bliss</p>
+            <p class="continue-text" style="font-size: large; color:black;">Create your account</p>
+
+            <!-- Signup Form -->
+            <form class="signup-form" action="/signup" method="POST">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                </div>
+
+                <button type="submit" class="login-btn">Sign Up</button>
+            </form>
+            <p class="signup-text">
+                Already have an account? <a href="login.html" class="signup-link">Log In</a>
+            </p>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulBliss</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <img src="assets/logo.png" alt="SoulBliss Logo" class="logo">
+            <p class="continue-text" style="font-size: large; color:black;">Welcome to</p>
+            <span class="brand-name">SoulBliss</span>
+            <p class="continue-text" style="font-size: x-large; color:black;">A Music Streaming Platform</p>
+            <div class="user-menu">
+                    <button class="login-btn" onclick="window.location.href='login.html'">LogIn</button>
+                    <button class="login-btn" onclick="window.location.href='signup.html'">SignUp</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<style> 
+.u-profile {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center;    /* Center buttons vertically */
+    flex-direction: column; /* Stack buttons vertically if needed */
+    gap: 1rem;              /* Add space between the buttons */
+    margin-top: 1rem;
+}
+
+.login-btn {
+    padding: 0.7rem 2rem;  /* Adjust size of buttons */
+    border: none;
+    border-radius: 5px;
+    background-color: #C4184B;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #a1143e;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for centering */
+    background: linear-gradient(to bottom right, #FF006E, #8338EC); /* Adds gradient background */
+}
+
+.login-card {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.logo {
+    width: 100px; /* Adjust size if needed */
+    margin-bottom: 1rem;
+}
+
+.subtitle, .continue-text {
+    margin: 0.5rem 0;
+}
+
+</style>

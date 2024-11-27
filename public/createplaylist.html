@@ -1,0 +1,282 @@
+<!--createplaylist.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulBliss</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <img src="assets/logo.png" alt="SoulBliss Logo" class="logo">
+            <span class="brand-name">SoulBliss</span>
+            <nav class="nav-menu">
+                <div class="nav-item" data-page="home" onclick="window.location.href='index.html'">Home</div>
+                <div class="nav-item active" data-page="create-playlist">Create Playlist</div>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="header">
+                <div class="search-bar-extended">
+                    <span class="search-icon"></span>
+                    <input type="text" placeholder="Search for songs to add">
+                </div>
+            </header>
+
+            <!-- Playlist Creation Content -->
+            <section id="create-playlist-page" class="page active">
+                <div class="playlist-header">
+                    <div class="playlist-cover">
+                        <img src="assets/playlist-cover.jpg" alt="Playlist Cover" id="playlist-cover-preview">
+                        <input type="file" id="cover-upload" accept="image/*" style="display: none;">
+                        <button class="upload-cover-btn" onclick="document.getElementById('cover-upload').click()">
+                            Upload Cover
+                        </button>
+                    </div>
+                    <div class="playlist-details">
+                        <input type="text" class="playlist-title-input" placeholder="Enter Playlist Name" maxlength="50">
+                        <textarea class="playlist-description" placeholder="Add an optional description"></textarea>
+                    </div>
+                </div>
+
+                <div class="search-results">
+                    <h3 class="section-title">Search Results</h3>
+                    <div class="songs-grid">
+                        <!-- Example search result songs -->
+                        <div class="song-card">
+                            <img src="assets/Cover/1.jpg" alt="Song Cover" class="song-cover">
+                            <div class="song-info">
+                                <h4 class="song-title">Click Search to</h4>
+                                <p class="artist-name">Find Songs</p>
+                            </div>
+                            <button class="add-button">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="added-songs">
+                    <h3 class="section-title">Added Songs</h3>
+                    <div class="songs-grid">
+                        <!-- Songs added to playlist will appear here -->
+                    </div>
+                </div>
+
+                <div class="playlist-actions">
+                    <button class="save-playlist-btn">Save Playlist</button>
+                    <button class="cancel-btn">Cancel</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Player Bar -->
+    <div class="player-bar">
+        <!-- Now Playing Section -->
+        <div class="now-playing">
+            <img src="path-to-track-cover.jpg" alt="Track Cover">
+            <div class="track-info">
+                <h4>Track Title</h4>
+                <p>Artist Name</p>
+            </div>
+            <button id="likeButton" class="like-button">♡</button>
+        </div>
+
+        <!-- Player Controls -->
+<div class="player-controls">
+    <button class="control-button shuffle">↑↓</button>
+    <button class="control-button previous">❙◀</button>
+    <button class="control-button play">▶</button>
+    <button class="control-button pause">❙❙</button>
+    <button class="control-button next">▶❙</button>
+    <button class="control-button repeat">↻</button>
+</div>
+
+<style>
+.player-controls button {
+    color: #C4184B;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.control-button.pause {
+    display: none;
+}
+
+.playing .control-button.play {
+    display: none;
+}
+
+.playing .control-button.pause {
+    display: inline-block;
+}
+</style>
+
+        <div class="player-right">
+            <div class="volume-control">
+                <div class="volume-container">
+                </div>
+                <button id="volumeButton" class="volume-button">🔊</button>
+                <div class="volume-slider">
+                    <div class="volume-progress"></div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <span class="time current">0:00</span>
+                <div class="progress-slider">
+                    <div class="progress"></div>
+                </div>
+                <span class="time total">0:00</span>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Updated header and search bar styles */
+        .header {
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            background: transparent;
+        }
+
+        .search-bar-extended {
+            position: relative;
+            width: 100%;
+            max-width: none;
+        }
+
+        .search-bar-extended input {
+            width: 100%;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 2rem;
+            background: rgba(0, 0, 0, 0.05);
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .search-bar-extended input:focus {
+            outline: none;
+            background: rgba(0, 0, 0, 0.08);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+
+        /* Rest of the existing styles */
+        .playlist-header {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .playlist-cover {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: #eee;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .playlist-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .upload-cover-btn {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        .playlist-details {
+            flex: 1;
+        }
+
+        .playlist-title-input {
+            width: 100%;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-bottom: 2px solid #C4184B;
+            background: transparent;
+        }
+
+        .playlist-description {
+            width: 100%;
+            height: 100px;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+            resize: none;
+        }
+
+        .playlist-actions {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+        }
+
+        .save-playlist-btn {
+            background: #C4184B;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            cursor: pointer;
+        }
+
+        .cancel-btn {
+            background: transparent;
+            border: 1px solid #C4184B;
+            color: #C4184B;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            cursor: pointer;
+        }
+
+        .add-button {
+            background: #C4184B;
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+    </style>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
